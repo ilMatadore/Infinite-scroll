@@ -9,7 +9,8 @@ let photosArray = [];
 // Unsplash API
 
 let count = 5;
-const proxyUrl = "https://radiant-castle-44157.herokuapp.com/";
+// const proxyUrl = "https://radiant-castle-44157.herokuapp.com/";
+// const proxyUrl = "https://ilmatadore.github.io/Infinite-scroll/";
 const apiKey = "60T9-RSltDcTQra0zVTEvVumNJg7WhyrIvaZxgI6Lac";
 let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}&query=travel`;
 
@@ -66,7 +67,7 @@ displayPhotos = () => {
 
 async function getPhotos() {
   try {
-    const response = await fetch(proxyUrl + apiUrl);
+    const response = await fetch(apiUrl); //proxyUrl + 
     photosArray = await response.json();
     displayPhotos();
   } catch (error) {
